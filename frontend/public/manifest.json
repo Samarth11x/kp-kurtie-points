@@ -1,0 +1,21 @@
+{
+  "name": "KP Kurtie Points",
+  "short_name": "KP Kurtie",
+  "description": "Premium, comfortable, and affordable short kurties for girls and women.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#fdf2f8",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/icon-192x192.png?v=2",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png?v=2",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
