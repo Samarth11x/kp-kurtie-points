@@ -46,13 +46,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full h-[80vh] min-h-[600px] flex items-center overflow-hidden bg-[#fdf2f8]">
         <div className="absolute inset-0 z-0 flex justify-end">
-          <div className="w-full md:w-3/5 h-full relative relative bg-[#e2ced4]">
-            {/* We're using a colored box placeholder since we don't have images yet, but an ideal implementation would use next/image here */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-30 text-[#881337]">
-              <span className="font-serif text-4xl">Image Placeholder</span>
-            </div>
+          <div className="w-full md:w-3/5 h-full relative">
+            <Image 
+              src="/images/hero.png" 
+              alt="KP Kurtie Point - Discover Your Short Kurti Style" 
+              fill 
+              className="object-cover object-center"
+              priority
+            />
           </div>
-        </div>
         
         {/* Soft overlay gradient for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#fdf2f8] via-[#fdf2f8]/90 to-transparent z-10 md:w-2/3"></div>
