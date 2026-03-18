@@ -55,6 +55,7 @@ export default function Home() {
               priority
             />
           </div>
+        </div>
         
         {/* Soft overlay gradient for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#fdf2f8] via-[#fdf2f8]/90 to-transparent z-10 md:w-2/3"></div>
