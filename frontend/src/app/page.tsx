@@ -45,20 +45,20 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative w-full h-[80vh] min-h-[600px] flex items-center overflow-hidden bg-[#fdf2f8]">
-        <div className="absolute inset-0 z-0 flex justify-end">
-          <div className="w-full md:w-3/5 h-full relative">
+        <div className="absolute inset-0 z-0">
+          <div className="w-full h-full relative">
             <Image 
               src="/images/hero.png" 
               alt="KP Kurtie Point - Discover Your Short Kurti Style" 
               fill 
-              className="object-cover object-center"
+              className="object-cover object-[center_top] md:object-right"
               priority
             />
           </div>
         </div>
         
         {/* Soft overlay gradient for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#fdf2f8] via-[#fdf2f8]/90 to-transparent z-10 md:w-2/3"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#fdf2f8]/95 via-[#fdf2f8]/80 to-transparent z-10 md:w-1/2"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-xl">
