@@ -51,8 +51,11 @@ export default function Home() {
               src="/images/hero.png" 
               alt="KP Kurtie Point - Discover Your Short Kurti Style" 
               fill 
-              className="object-cover object-[center_top] md:object-right"
+              className="object-cover md:object-right"
+              style={{ objectPosition: 'center 30px' }}
+              quality={100}
               priority
+              unoptimized
             />
           </div>
         </div>
