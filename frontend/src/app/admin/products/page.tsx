@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Plus, Search, MoreVertical, Edit2, Trash2, Eye, Loader2 } from 'lucide-react';
+import { API_BASE } from '@/lib/api';
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<any[]>([]);
@@ -14,7 +15,7 @@ export default function AdminProductsPage() {
   const fetchProducts = async () => {
     try {
       setIsLoading(true);
-      const res = await fetch('http://localhost:5000/api/products');
+      const res = await fetch(`${API_BASE}/api/products`);
       const data = await res.json();
       setProducts(data.products || []);
     } catch (error) {
@@ -38,7 +39,7 @@ export default function AdminProductsPage() {
             Authorization: `Bearer ${userInfo.token}`,
           },
         };
-        const res = await fetch(`http://localhost:5000/api/products/${id}`, config);
+        const res = await fetch(`${API_BASE}/api/products/${id}`, config);
         
         if (res.ok) {
           fetchProducts(); // Refresh list

@@ -46,7 +46,8 @@ export default function ProductDetailsPage({ params }: { params: Promise<{ slug:
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/products/slug/${slug}`);
+        const { API_BASE } = await import('@/lib/api');
+        const res = await fetch(`${API_BASE}/api/products/slug/${slug}`);
         if (!res.ok) {
           setError('Product not found');
           return;

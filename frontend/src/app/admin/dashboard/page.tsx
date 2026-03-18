@@ -20,7 +20,8 @@ export default function AdminDashboardPage() {
       try {
         const userInfo = JSON.parse(localStorage.getItem('userInfo') || '{}');
         const config = { headers: { Authorization: `Bearer ${userInfo.token}` } };
-        const res = await fetch('http://localhost:5000/api/products', config);
+        const { API_BASE } = await import('@/lib/api');
+        const res = await fetch(`${API_BASE}/api/products`, config);
         const data = await res.json();
         
         const products = data.products || [];
